@@ -1,3 +1,5 @@
+\newcounter{gcount1}
+\newcounter{gcount2}
 \subsection{Purpose}
 This document is the baseline for project planning and for software evaluation of Travlendar+; it describes the system in terms of functional and nonfunctional requirements, analysing the needs of the customer in order to model the system. \\
 Travlendar+ is a calendar-based application for people who have problems with scheduling working and personal appointments at various locations all across Milan. The application aims at simplifying the life of people by automatically computing travels and by organizing the daily schedules.
@@ -13,8 +15,11 @@ The journeys will use public transports, trains and bike sharing systems that ar
 
 
 \subsubsection{Goals}
-\renewcommand{\theenumii}{\arabic{enumii}}
-\begin{enumerate}
+\begin{list}
+{\bfseries{}[G.\arabic{gcount1}]~}
+{
+\usecounter{gcount1}
+}
 \item
 Create meeting.
 \item
@@ -23,7 +28,11 @@ Warning unreachable appointment.
 Suggest travel means depending on the appointment and the day.
 \item
 Support the user preferences.
-	\begin{enumerate}
+	\begin{list}
+	{\bfseries{}[G.\arabic{gcount1}.\arabic{gcount2}]~}
+	{
+	\usecounter{gcount2}
+	}
 	\item
 	Support a multitude of travel means.
 	\item
@@ -32,25 +41,33 @@ Support the user preferences.
 	Select combinations of transportation means.
 	\item
 	Minimize carbon footprint.
-	\end{enumerate}
+	\end{list}
 \item
 Manage the user's lunch.
-	\begin{enumerate}
+	\begin{list}
+	{\bfseries{}[G.\arabic{gcount1}.\arabic{gcount2}]~}
+	{
+	\usecounter{gcount2}
+	}
 	\item
 	Select the time slot.
 	\item
 	Select the duration.
-	\end{enumerate}
+	\end{list}
 \item
 Manage the user's break.
 \item
 Manage the journey.
-	\begin{enumerate}
+	\begin{list}
+	{\bfseries{}[G.\arabic{gcount1}.\arabic{gcount2}]~}
+	{
+	\usecounter{gcount2}
+	}
 	\item
 	Buy the public transportation tickets.
 	\item
 	Research the nearest car or bike of a vehicle sharing system.
-	\end{enumerate}
-\end{enumerate}
+	\end{list}
+\end{list}
 
 %what you write here is a comment that is not shown in the final text
