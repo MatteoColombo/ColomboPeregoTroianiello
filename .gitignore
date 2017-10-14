@@ -7,3 +7,11 @@
 # ignore all log files
 *.log
 
+#ignore all aux files
+*.aux
+
+#ignore all out files
+*.out
+
+#ignore all toc files
+*.toc

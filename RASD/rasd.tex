@@ -2,28 +2,29 @@
 
 \begin{document}
 
-\title{\textbf{Requirement Analysis and Specification Document}}
-\author{Alessandro Perego \and Andrea Troianiello \and Matteo Colombo}
-
 \begin{titlepage}
-\maketitle
-\thispagestyle{empty}
-\centering
-\includegraphics[scale=0.3]{Images/polimi}\\
-\vspace*{5cm}
-
-{\fontsize{2cm}{2.5cm}\selectfont Travlendar+}\\
+	\begin{center}
+		\line(1,0){400}\\	[0.6cm]
+		\Huge{\bfseries{TRAVLENDAR+}}\\
+		\line(1,0){400}\\
+		[3cm]
+		\includegraphics[scale=0.3]{Images/polimi}\\
+		[3cm]
+		\textsc{\Huge Requirement Analysis and Specification Document}\\[1cm]
+		\textsc{\huge 29/10/2017 - v1.0}\\
+		[4cm]
+		\textsc{\normalsize Matteo Colombo \hspace{0.4cm} Alessandro Perego \hspace{0.4cm} Andrea Troianiello }
+	\end{center}
 \end{titlepage}
-
-%Define deliverable specific info
-%Replace cell contents where needed
+	
+%Deliverable specific info
 \begin{table}[h!]
 \begin{tabu} to \textwidth { X[0.3,r,p] X[0.7,l,p] }
 \hline
 
 \textbf{Deliverable:} & RASD\\
 \textbf{Title:} & Requirement Analysis and Verification Document \\
-\textbf{Authors:} & Alessandro Perego, Andrea Troianiello, Matteo Colombo \\
+\textbf{Authors:} & Matteo Colombo, Alessandro Perego, Andrea Troianiello \\
 \textbf{Version:} & 1.0 \\ 
 \textbf{Date:} & 29-October-2017 \\
 \textbf{Download page:} & \href{https://github.com/MatteoColombo/ColomboPeregoTroianiello}{GitHub} \\
@@ -31,60 +32,50 @@
 \end{tabu}
 \end{table}
 
-
-
-
-\setcounter{page}{2}
-
-
-%------------------------------------------------------------------------------------------------------------------------------------------------
-\newpage
-\addcontentsline{toc}{section}{Table of Contents}
+%------table of contents------%
+\clearpage
 \tableofcontents
-\newpage
-\addcontentsline{toc}{section}{List of Figures}
-\listoffigures
-\addcontentsline{toc}{section}{List of Tables}
-\listoftables
+
+
+%------ CONTENT ------%
 
 %------------------------------------------------------------------------------------------------------------------------------------------------
 \clearpage
 {\color{Blue}{\section{Introduction}}}
 \label{sect:introduction}
-\input{Files/introduction}
+\input{files/introduction}
 
 %------------------------------------------------------------------------------------------------------------------------------------------------
 \clearpage
 {\color{Blue}{\section{Overall Description}}}
 \label{sect:overview}
-\input{Files/overview}
+\input{files/overview}
 
 %------------------------------------------------------------------------------------------------------------------------------------------------
 \clearpage
 {\color{Blue}{\section{Specific Requirements}}}
 \label{sect:requirements}
-\input{Files/requirements}
+\input{files/requirements}
 
 %------------------------------------------------------------------------------------------------------------------------------------------------
 \clearpage
 {\color{Blue}{\section{Formal Analysis Using Alloy}}}
 \label{sect:alloy}
-\input{Files/alloy}
+\input{files/alloy}
 
 %------------------------------------------------------------------------------------------------------------------------------------------------
 \clearpage
 {\color{Blue}{\section{Effort Spent}}}
 \label{sect:effort}
-\input{Files/effort}
+\input{files/effort}
 
 
 %------------------------------------------------------------------------------------------------------------------------------------------------
 \clearpage
 \addcontentsline{toc}{section}{References}
 \bibliographystyle{plain}
-\bibliography{rasd}
+\bibliography{RASD}
 %------------------------------------------------------------------------------------------------------------------------------------------------
-
 
 
 
