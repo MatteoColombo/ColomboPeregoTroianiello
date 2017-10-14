@@ -6,3 +6,62 @@ The application will be able to buy transportations ticket in a secure and trace
  The user can also modify the preferences for your trip in such a way to  receive suggested of transportation in base of the selected preferences.
 
 \subsection{Product Functions}
+
+\newlist{requirments}{enumerate}{1}
+\setlist[enumerate]{label*=\bfseries [G.\arabic*]}
+
+\begin{enumerate}
+	\item Allow the user to create meeting.
+	\setlist[requirments]{label=\bfseries [R.1.\arabic*]}
+	\begin{requirments}
+  		\item User must be logged in the application.
+  		\item User must be filled up a location for the meetings.
+  		\item User must be filled up the starting and ending time of the meeting.
+  		\item User must have put a name for the meeting.
+  		\item User can set specific mobility options for the travel to the meeting
+	\end{requirments}
+	
+  	\item Show warnings in case of unreachable appointment.
+  	\setlist[requirments]{label=\bfseries [R.2.\arabic*]}
+	\begin{requirments}
+		\item User must has at least two meeting.
+		\item The warnings must be shown after a meeting created when the travelling 				time is not enough for reach the following meeting from the location of 				the previous one.
+		\item Permit the meeting to be created even if the alert appears.
+	\end{requirments}
+	
+  	\item Suggest travel means depending on the appointment and the day.
+  	\setlist[requirments]{label=\bfseries [R.3.\arabic*]}
+	\begin{requirments}
+  		\item User must be inserted type of the appointment
+	\end{requirments}
+	
+  	\item Allow the user to select preferences and to filter options.
+  	\setlist[requirments]{label=\bfseries [R.4.\arabic*]}
+	\begin{requirments}
+		\item Support a multitude of travel means.
+		\item Provide reasonable constraints on different travel means.
+		\item Application must see result consistent with the user’s preferences.
+		\item Preferences cannot be added by the user.
+		\item User can be able to minimize carbon footprint
+	\end{requirments}
+	
+  	\item Schedule the user’s lunch break.
+  	\setlist[requirments]{label=\bfseries [R.5.\arabic*]}
+	\begin{requirments}
+		\item User can select the duration of the lunch break at least 30 minutes.
+		\item User must be able to set the slot time for the lunch break between 11.30 				am and 2.30 pm. 
+	\end{requirments}
+	
+  	\item Allow the user to schedule breaks during the day.
+  	\setlist[requirments]{label=\bfseries [R.6.\arabic*]}
+
+	
+  	\item Assist the user during the travel.
+  	\setlist[requirments]{label=\bfseries [R.7.\arabic*]}
+	\begin{requirments}
+		\item Allow user to buy a transportation ticket. 
+		\item Locate the nearest sharing system (either car or bike) platform.
+	\end{requirments}
+	
+\end{enumerate}
+
