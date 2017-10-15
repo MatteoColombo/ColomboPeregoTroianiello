@@ -7,7 +7,85 @@ The application will be able to buy transportations ticket in a secure and trace
 
 \subsection{Product Functions}
 
+\newcounter{gcount}
+\newcounter{rcount}
+\begin{list}
+{\bfseries{}[G.\arabic{gcount}]~}
+{
+\usecounter{gcount}
+}
+    \item Allow the users to create meetings.
+	\begin{list}
+	{\bfseries{}[R.\arabic{gcount}.\arabic{rcount}]~}
+	{
+	\usecounter{rcount}
+	}
+        \item To create a meeting, the user must be logged in the application with an active account.
+        \item The users must be able to create an account, so that they can utilise all the features of the application..
+        \item Each meeting must have a location, which can be either an address or coordinates.
+        \item Each meeting must have a starting and ending hour.
+        \item Each meeting must have a name.
+        \item Each meeting must have a type.
+    \end{list}
+    \item Show warnings in case of unreachable appointments.
+    \begin{list}
+	{\bfseries{}[R.\arabic{gcount}.\arabic{rcount}]~}
+	{
+	\usecounter{rcount}
+	}
+        \item A warning is given when scheduling a meeting, if the location is unreachable with the available travel means.
+        \item In case of strikes or exceptional events (e.g. train failures), a warning is given to the user. 
+        \item Users can create meetings even if a warning is shown.
+    \end{list}
+    \item Suggest travel means depending on the appointment and the day.
+    \begin{list}
+	{\bfseries{}[R.\arabic{gcount}.\arabic{rcount}]~}
+	{
+	\usecounter{rcount}
+	}
+        \item Weather conditions must be taken in account when proposing a travel system.
+        \item Different kind of appointments will be reached with different travel means.
+    \end{list}
+    \item Allow the users to select preferences and to filter options.
+    \begin{list}
+	{\bfseries{}[R.\arabic{gcount}.\arabic{rcount}]~}
+	{
+	\usecounter{rcount}
+	}
+        \item The application must support many travel means and transport systems.
+		\item Travel means may be subject to constraints (e.g. user can walk for at most 500m).
+		\item Application must show results consistent with the user’s preferences.
+		\item Users should be allowed to specify their own passes.
+		\item Users should be able to specify their home address.
+    \end{list}
+    \item Schedule the users’ lunch break.
+    \begin{list}
+	{\bfseries{}[R.\arabic{gcount}.\arabic{rcount}]~}
+	{
+	\usecounter{rcount}
+	}
+        \item The minimum lunch break duration must be 30 minutes. 
+		\item Users must be able to select a time slot in which lunch should be scheduled.
 
+    \end{list}
+    \item Allow the users to schedule breaks during the day.
+    \begin{list}
+	{\bfseries{}[R.\arabic{gcount}.\arabic{rcount}]~}
+	{
+	\usecounter{rcount}
+	}
+        \item The minimum break duration must be 5 minutes.
+    \end{list}
+    \item Assist the users during the travel.
+    \begin{list}
+	{\bfseries{}[R.\arabic{gcount}.\arabic{rcount}]~}
+	{
+	\usecounter{rcount}
+	}
+	\item Users should be able to buy transportation tickets.
+	\item The system must locate the nearest vehicle of the selected sharing system. 
+	\end{list}
+\end{list}
 
 \subsection{User Characteristics}
 
