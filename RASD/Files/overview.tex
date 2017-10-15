@@ -112,6 +112,8 @@ For Android the minimum supported OS version is Android 5.0 Lollipop.\\
 For iOS the minimum required OS version is iOS 8.
 \item
 The application requires an Internet connection.
+\item
+The application requires that devices have an integrated GPS system.
 \end{enumerate}
 
 \subsubsection{Software Constraints}
@@ -132,4 +134,36 @@ The system must guarantee that users data are stored in a safety way and that ar
 The system must ask for the users permissione to acquire, store and elaborate their location.
 \item
 The system must complain with the local laws.
+\end{enumerate}
+
+\subsection{Assumptions and Dependencies}
+\subsubsection{Domain Assumptions}
+\begin{enumerate}
+\item
+Tickets are not named and they can be bought without owning an account on the service provider's website.
+\item
+During a travel between two meetings, combinations of different travel means could be used.
+\item
+Bus, Trains and all the other public services are always on schedule.
+\item
+An available vehicle of a sharing system service can always be located within a 10 minutes walk.
+\item
+Every vehicle of a sharing system service can be located through GPS.
+\item
+Strikes and system malfunctions are always reported on the companies websites.
+\item
+An account is composed by: username, email and password.
+\item
+Email address is unique for each account.
+\item
+Public transport passes are composed by: validity period, public transport to which they are related and validity area or route.
+\item
+Mobile devices used by the users have GPS and can be located.
+\item
+If "home location" is not set, the position retrieved through GPS is used as initial location for the daily travels.
+\item
+System suggests onlye the best journey option to the users.
+\item
+Meetings can be of three types: personal, family and working.
+	
 \end{enumerate}
