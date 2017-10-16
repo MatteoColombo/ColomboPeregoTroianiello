@@ -138,7 +138,12 @@ The system must complain with the local laws.
 
 \subsection{Assumptions and Dependencies}
 \subsubsection{Domain Assumptions}
-\begin{enumerate}
+\newcounter{tcount}
+\begin{list}
+{\bfseries{}[D.\arabic{tcount}]~}
+{
+\usecounter{tcount}
+}
 \item
 Tickets are not named and they can be bought without owning an account on the service provider's website.
 \item
@@ -162,8 +167,7 @@ Mobile devices used by the users have GPS and can be located.
 \item
 If "home location" is not set, the position retrieved through GPS is used as initial location for the daily travels.
 \item
-System suggests onlye the best journey option to the users.
+System suggests only the best journey option to the users.
 \item
 Meetings can be of three types: personal, family and working.
-	
-\end{enumerate}
+\end{list}
