@@ -18,3 +18,12 @@
 
 #ignore all .bak files
 *.bak
+
+#ignore all .dvi files
+*.dvi
+
+#ignore all .lof files
+*.lof
+
+#ignore all .lot files
+*.lot
