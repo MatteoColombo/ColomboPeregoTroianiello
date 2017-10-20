@@ -4,12 +4,12 @@
 
 \clearpage
 \subsubsection{Hardware Interfaces}
-This project doesn't not support any hardware interfaces.
+This project doesn't require any hardware interface.
 
 \subsubsection{Software Interfaces}
 \renewcommand{\labelitemi}{$\bullet$}
 \begin{itemize}
-\item Database Managment System (DBMS):
+\item Database Management System (DBMS):
 	\begin{itemize}
 	\item Name: MySQL
 	\item Version: 5.6.21
@@ -36,20 +36,20 @@ This project doesn't not support any hardware interfaces.
 \end{itemize}
 
 \subsubsection{API Interfaces}
-For map visualization and for show the track of the travel we use the Google Maps API. This API provide the best and complete map information. We can retrive real time information for road traffic and use these to give a precisly travelling time.\\
-\\For the weather information we use OpenWeatherMap API. This API give access to current weather data for moreover than 200.000 cities on the world and it takes data from more than 40.000 wheater stations. The data is avaible in various format: JSON, HTML and XML. We use the 3 hours weather forecast for For more information see the OpenWeatherMap website ({\href{http://openweathermap.org/api}{\color{Black}{http://openweathermap.org/api}}}).
+For map visualization and to show the track of the journey we use the Google Maps API. This API provides the best and most complete maps system. We can retrieve real time information for road traffic and use these to compute a precise travelling time.\\\\
+For the weather information we use the OpenWeatherMap API. This API gives access to current weather data for moreover than 200.000 cities on the world and it takes data from more than 40.000 wheater stations. The data is avaible in various formats: JSON, HTML and XML. We use the 3 hours weather forecasts. For more information see the OpenWeatherMap website ({\href{http://openweathermap.org/api}{\color{Black}{http://openweathermap.org/api}}}).
 \\\\
-For retrive the information of the schedule and anomalies of train, bus, tram and underground we have an agreement with the companies that release the service. With this agreement we can use the data to calculate the best track for our users and an advise theirs when a service is not avaible for some reason.
+To retrive the information of the schedule and anomalies of train, bus, tram and underground we have an agreement with the companies that provide the services. With this agreement we can use their data to calculate the best track for our users and an advise them when for some reason a service is not avaible.
 
 \subsubsection{Communication Interfaces}
-For communication we use the TCP protocol on port 80 for HTTP,port 443 for HTTPS, port 3306 for MySQL database. The data from server to the application arrive in a JSON format.
+For communications we use the TCP protocol on port 80 for HTTP,port 443 for HTTPS, port 3306 for MySQL database. The data from the server to the application arrive in a JSON format.
 
 \input{files/scenarios}
 
 \subsection{Performance Requirements}
 \begin{enumerate}
 \item
-95\% of the request should be processed within 5 seconds.
+95\% of the requests should be processed within 5 seconds.
 \item
 100\% of the requests should be processed within 20 seconds.
 \item
@@ -61,3 +61,21 @@ There is no limit to the total number of the registered users.
 \subsection{Design Constraints}
 
 \subsection{Software System Attributes}
+\subsubsection{Reliability}
+The system is designed to run on a single server and its reliability depends on the server one. The server is required only for logins an backups of the users’ schedules.
+In case of downtime, as long as the user is logged in the application, the fault wouldn’t affect the functions and backups would be carried out when the service returns available.
+
+\subsubsection{Availability}
+The system is required to have a 99\% uptime. Most scheduled downtimes must occur in the weekends at night time.
+
+\subsubsection{Security}
+All the communications between the clients and the server will be encrypted and protected by using the SSL protocol.
+All the information will be stored on the server and security will have high priority; users’ passwords will not be stored in plain text.
+
+\subsubsection{Maintainability}
+
+\subsubsection{Portability}
+The backend will be developed in Java so that it will be possible to run the application on every machine that supports Java Virtual Machine.
+The frontend will be developed in Java for Android and in Swift for iOS and the application must support at least the last three version of each operative system.
+
+
