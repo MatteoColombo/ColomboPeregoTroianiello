@@ -2,7 +2,46 @@
 \subsubsection{User Interfaces}
 \input{files/mockup}
 
-\subsection{Functional Requirements}
+\clearpage
+\subsubsection{Hardware Interfaces}
+This project doesn't not support any hardware interfaces.
+
+\subsubsection{Software Interfaces}
+\begin{itemize}
+\item Database Managment System (DBMS):
+	\begin{itemize}
+	\item Name: MySQL
+	\item Version: 5.6.21
+	\item Source: {\href{https://www.mysql.com}		{\color{Black}{https://www.mysql.com}}}
+	\end{itemize}
+\item Operating System:
+	\begin{itemize}
+	\item Name: Android
+	\item Version: 5.0 Lollipop or higher
+	\item Source: {\href{https://www.android.com/}		{\color{Black}{https://www.android.com/}}}
+	\end{itemize}
+	\begin{itemize}
+	\item Name: IOS
+	\item Version: 8 or higher
+	\item Source: {\href{https://www.apple.com/ios}		{\color{Black}{https://www.apple.com/ios}}}
+	\end{itemize} 
+\item Application Server:
+	\begin{itemize}
+	\item Name: Glassfish
+	\item Version: 4.1
+	\item Source: {\href{https://javaee.github.io/glassfish/}		{\color{Black}{https://javaee.github.io/glassfish/}}}
+	\end{itemize}
+	
+\end{itemize}
+
+\subsubsection{API Interfaces}
+For map visualization and for show the track of the travel we use the Google Maps API. This API provide the best and complete map information. We can retrive real time information for road traffic and use these to give a precisly travelling time.\\
+\\For the weather information we use OpenWeatherMap API. This API give access to current weather data for moreover than 200.000 cities on the world and it takes data from more than 40.000 wheater stations. The data is avaible in various format: JSON, HTML and XML. We use the 3 hours weather forecast for For more information see the OpenWeatherMap website ({\href{http://openweathermap.org/api}{\color{Black}{http://openweathermap.org/api}}}).
+\\\\
+For retrive the information of the schedule and anomalies of train, bus, tram and underground we have an agreement with the companies that release the service. With this agreement we can use the data to calculate the best track for our users and an advise theirs when a service is not avaible for some reason.
+
+\subsubsection{Communication Interfaces}
+For communication we use the TCP protocol on port 80 for HTTP,port 443 for HTTPS, port 3306 for MySQL database. The data from server to the application arrive in a JSON format.
 
 \input{files/scenarios}
 
