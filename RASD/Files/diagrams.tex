@@ -1,27 +1,22 @@
 \subsection{Functional Requirements}
 
+
+\begin{figure}[!htb]
 \subsubsection{Class Diagram}
-
-\begin{figure}[!htb]
-\begin{minipage}[b]{0.4\textwidth}
-	\centering
-	\includegraphics[scale=0.4]{images/ClassDiagram}
-	\caption{Class diagram}
-	\label{ref:classdiagram}
-\end{minipage}
+\centering
+\includegraphics[scale=0.4]{images/ClassDiagram}
+\caption{Class diagram}
+\label{ref:classdiagram}
 \end{figure}
 
+\begin{figure}[!htb]
 \subsubsection{Use Case Diagram}
-
-\begin{figure}[!htb]
-\begin{minipage}[b]{0.6\textwidth}
-	\centering
-	\includegraphics[scale=0.6]{images/UseCaseDiagram}
-	\caption{Use case diagram}
-	\label{ref:classdiagram}
-\end{minipage}
+\centering
+\includegraphics[scale=0.6]{images/UseCaseDiagram}
+\caption{Use case diagram}
+\label{ref:classdiagram}
 \end{figure}
-
+\clearpage
 \subsubsection{Use Case Descriptions}
 
 In this section are listed some common or significant use cases derivable from
@@ -42,7 +37,7 @@ the Use Case diagram.
 						\item
 						The visitor fills all the mandatory fields.
 						\item
-						The visitor clicks on the “Confirm“ button.
+						The visitor clicks on the “Sign Up“ button.
 						\item
 						The system send the data to the server.
 						\item
@@ -74,8 +69,6 @@ All exceptions are handled notifying the issue to the visitor and taking back th
 				The user inserts his credentials into the “email” and “password” fields.
 				\item
 				The user clicks on the “Login” button in order to access.
-				\item
-				The system redirects the user to the map and searches for available cars in the nearby automatically.
 			\end{enumerate} \\ 
 \textbf{Output conditions:} & The user is successfully redirected to the
 home page.\\ 
@@ -85,14 +78,14 @@ home page.\\
 				\item
 				The user inserts a not valid password.
 			\end{enumerate}
-All exceptions are handled notifying the issue to the user and taking back the Event Flow to the point 2. \\
+All exceptions are handled notifying the issue to the user and taking back the Event Flow to the point 1. \\
 \hline
 \end{tabular}
 
 
 %User creates a meeting%
 \begin{tabular} { p{5cm} p{8cm} }  
-\textbf{The user creates a meeting.}\\
+\textbf{Create a meeting.}\\
 \hline
 \textbf{Actor:} & User \\ 
 \textbf{Goals:} & G.2, G.3 \\ 
@@ -104,8 +97,6 @@ All exceptions are handled notifying the issue to the user and taking back the E
 				The user inserts the information  into the fields and the type.
 				\item
 				The user clicks on the “Create meeting” button.
-				\item
-				If the meeting is unreachable, the application shows a warning message. The user can still create the meeting or edit the information.
 			\end{enumerate}\\ 
 \textbf{Output conditions:} & The user is successfully redirected to the
 meeting.\\ 
@@ -127,7 +118,7 @@ All exceptions are handled notifying the issue to the user and taking back the E
 
 %User travels to the meeting%
 \begin{tabular} { p{5cm} p{8cm} }  
-\textbf{The user creates travels to the meeting.}\\
+\textbf{Travel to the meeting}\\
 \hline
 \textbf{Actor:} & User \\ 
 \textbf{Goals:} & G.4, G.8 \\ 
@@ -157,7 +148,7 @@ All exceptions are handled notifying the issue to the user and taking back the E
 
 %User selects preferences and filters options%
 \begin{tabular} { p{5cm} p{8cm} }
-\textbf{The user creates travels to the meeting.} \\
+\textbf{Setup preferences} \\
 \hline
 \textbf{Actor:} & User \\ 
 \textbf{Goals:} & G.5, G.7 \\ 
