@@ -1,21 +1,22 @@
 \subsection{Functional Requirements}
-
-
-\begin{figure}[!htb]
+ 
 \subsubsection{Class Diagram}
+\begin{figure}[!htb]
 \centering
 \includegraphics[scale=0.4]{images/ClassDiagram}
-\caption{Class diagram}
+\caption{Class Diagram}
 \label{ref:classdiagram}
 \end{figure}
-
-\begin{figure}[!htb]
+ 
+\clearpage
 \subsubsection{Use Case Diagram}
+\begin{figure}[!h]
 \centering
-\includegraphics[scale=0.6]{images/UseCaseDiagram}
-\caption{Use case diagram}
-\label{ref:classdiagram}
+\includegraphics[scale=0.4]{images/UseCaseDiagram}
+\caption{Use Case Diagram}
+\label{ref:usecasediagram}
 \end{figure}
+ 
 \clearpage
 \subsubsection{Use Case Descriptions}
 
@@ -23,6 +24,7 @@ In this section are listed some common or significant use cases derivable from
 the Use Case diagram.
 
 %Visitor's registration%
+\begin{table}
 \begin{tabular} { p{5cm} p{8cm} } 
 \textbf{Visitor's registration} & \\
 \hline
@@ -43,19 +45,23 @@ the Use Case diagram.
 						\item
 						The system sends a confirmation email to the new user.
 						\end{enumerate}\\ 
-\textbf{Output conditions:} & The visitor successfully ends the registration process and is redirected to the home page. From now he can login to the application and start using that. \\ 
+\textbf{Output conditions:} & The visitor successfully ends the registration process and is redirected to the login page. From now he can login to the application and start using that. \\ 
 \textbf{Exception:} & \begin{enumerate}
 						\item
 						The visitor is already an user.
 						\item
 						The visitor inserts not valid information in one or more mandatory fields.
 						\item
-						The visitor chooses an email that has been associated with another user.
+						The visitor chooses an email that is associated with another user.
+						\item
+						The server is unreachable.
 					\end{enumerate}
 All exceptions are handled notifying the issue to the visitor and taking back the Event Flow to the point 2. \\
 \hline
 \end{tabular}
-
+\caption{Visitor's registration}
+\label{ref:visitorsregistration}
+\end{table}
 
 %User's login%
 \begin{tabular} { p{5cm} p{8cm} } 
@@ -63,7 +69,7 @@ All exceptions are handled notifying the issue to the visitor and taking back th
 \hline
 \textbf{Actor:} & User \\ 
 \textbf{Goals:} & G.1 \\ 
-\textbf{Input conditions:} & The visitor is on the login page. \\
+\textbf{Input conditions:} & The user is on the login page. \\
 \textbf{Event flow:} & \begin{enumerate}
 				\item
 				The user inserts his credentials into the “email” and “password” fields.
@@ -77,6 +83,8 @@ home page.\\
 				The user inserts a not valid email.
 				\item
 				The user inserts a not valid password.
+				\item
+				The server is unreachable.
 			\end{enumerate}
 All exceptions are handled notifying the issue to the user and taking back the Event Flow to the point 1. \\
 \hline
@@ -85,7 +93,7 @@ All exceptions are handled notifying the issue to the user and taking back the E
 
 %User creates a meeting%
 \begin{tabular} { p{5cm} p{8cm} }  
-\textbf{Create a meeting.}\\
+\textbf{Create a meeting}\\
 \hline
 \textbf{Actor:} & User \\ 
 \textbf{Goals:} & G.2, G.3 \\ 
@@ -99,7 +107,7 @@ All exceptions are handled notifying the issue to the user and taking back the E
 				The user clicks on the “Create meeting” button.
 			\end{enumerate}\\ 
 \textbf{Output conditions:} & The user is successfully redirected to the
-meeting.\\ 
+meeting page.\\ 
 \textbf{Exception:} & \begin{enumerate}
 				\item
 				The name isn’t valid.
@@ -109,12 +117,28 @@ meeting.\\
 				The start hour and end hour precede the current date.
 				\item
 				Exists an another meeting with the same hours. 
+				\item
+				Travel mean is unavailable. 
 			\end{enumerate}
-All exceptions are handled notifying the issue to the user and taking back the Event Flow to the point 2.
+These exceptions are handled notifying the issue to the user and taking back the Event Flow to the point 2.
+If the meeting is unreachable, this use case is extended by "Resolve the problem of unreachable meeting".
 \\
 \hline
 \end{tabular}
 
+%Resolve the problem of unreachable meeting%
+\begin{tabular} { p{5cm} p{8cm} }  
+\textbf{Resolve the problem of unreachable meeting}\\
+\hline
+\textbf{Actor:} & User \\ 
+\textbf{Goals:} & G.2, G.3 \\ 
+\textbf{Input conditions:} & The user is creating a meeting and this is unreachable.\\
+\textbf{Event flow:} & The applicaiton shows a warning message and the user can either click "Edit" to change the meeting information or click "Create" and continue creating the meeting even if it is unreachable in time.\\ 
+\textbf{Output conditions:} & The user is successfully redirected to the
+meeting page.\\ 
+\textbf{Exception:} & All exceptions are the same as those the use case "Create a meeting". \\
+\hline
+\end{tabular}
 
 %User travels to the meeting%
 \begin{tabular} { p{5cm} p{8cm} }  
@@ -131,13 +155,15 @@ All exceptions are handled notifying the issue to the user and taking back the E
 				\item
 				The navigate page helps the user with indications.
 				\item
-				When the user is arrived at the desired location, the application notify him.
+				When the user arrives at the desired location, the application notifies him.
 			\end{enumerate} \\ 
 \textbf{Output conditions:} & The user is successfully redirected to the
 schedule.\\ 
 \textbf{Exception:} & \begin{enumerate}
 				\item
 				The GPS is unavailable.
+				\item
+				Internet connection isn't working.				
 				\item
 				The location isn’t found. 
 			\end{enumerate}
