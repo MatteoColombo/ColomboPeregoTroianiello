@@ -1,5 +1,5 @@
-# ignore all pdf files
-*.pdf
+# ignore all pdf files into the RASD folder
+RASD/*.pdf
 
 # ignore all gz files
 *.gz
