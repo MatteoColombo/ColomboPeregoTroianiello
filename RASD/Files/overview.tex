@@ -125,15 +125,17 @@ If the users decide to use the bike sharing systems, they must install the syste
 \subsubsection{Safety Constraints}
 \begin{enumerate}
 \item
-The system must guarantee that users data are stored in a safety way and that are used only within the application:
+The system must guarantee that users data are stored in a safety way and that are used only within the application.
 \end{enumerate}
 
 \subsubsection{Regulatory Constraints}
 \begin{enumerate}
 \item
-The system must ask for the users permissione to acquire, store and elaborate their location.
+The system must ask for the users permission to acquire, store and elaborate their location.
 \item
 The system must complain with the local laws.
+\item
+It is responsibility of the user to complain with the rules and the local laws.
 \end{enumerate}
 
 \subsection{Assumptions and Dependencies}
@@ -145,29 +147,92 @@ The system must complain with the local laws.
 \usecounter{tcount}
 }
 \item
-Tickets are not named and they can be bought without owning an account on the service provider's website.
+The time slot in which lunch can be scheduled is between 11.30am and 2.30pm.
 \item
-During a travel between two meetings, combinations of different travel means could be used.
+The minimum duration for a lunch break is 30 minutes.
 \item
-Bus, Trains and all the other public services are always on schedule.
+Breaks work in the same way of lunch, but their time slot can be customized by the user.
 \item
-An available vehicle of a sharing system service can always be located within a 10 minutes walk.
+The minimum duration of a break is 5 minutes.
 \item
-Every vehicle of a sharing system service can be located through GPS.
+A meeting is always associated to a position.
 \item
-Strikes and system malfunctions are always reported on the companies websites.
+When a user adds a new meeting, if the application detects that it causes one of the following errors, e can either choose to force the creation of the meeting or edit it and change the parameters.
+Errors:
+\begin{enumerate}
 \item
-An account is composed by: username, email and password.
+The meeting overlaps with another.
 \item
-Email address is unique for each account.
+The meeting is unreachable.
 \item
-Public transport passes are composed by: validity period, public transport to which they are related and validity area or route.
+The meeting makes another unreachable.
 \item
-Mobile devices used by the users have GPS and can be located.
+The meeting doesn't leave enough time for lunch.
+\end{enumerate}
+
 \item
-If "home location" is not set, the position retrieved through GPS is used as initial location for the daily travels.
+If the user decides to force the creation of the meeting even if the application returns a warning, it is his responsibility to reach the location in time.
 \item
-System suggests only the best journey option to the users.
+In case the user decides to force the creation of a meeting that doesn’t leave enough time for lunch, the time for the lunch break is not reserved.
 \item
-Meetings can be of three types: personal, family and working.
+In case of a long travel that overlaps with the lunch break and doesn’t give enough time to the lunch in (but there is enough time after the lunch slot), it may be splitted in two parts, separated by the break. The same applies for afternoon/morning breaks.
+\item
+The application gives higher priority at moving breaks at the beginning of their dedicated time slot.
+\item
+The application tries to maximize the duration of the breaks.
+\item
+The daily schedule starts and ends always at the user’s house.
+\item
+An event starts and ends always in the same calendar day.
+\item
+GPS has a precision of 3m.
+\item
+When creating a meeting, the position typed by the user is used as meeting location to compute the travel time; while during the navigation or when the user is attending a meeting, the application retrieves his real location through GPS and updates travels times with it.
+\item
+The user can select a preferred travel mean for each type of meeting, so that depending on the type, the application prefers different travel means. For example, if for family meetings “car” is the preferred travel mean, if it is available, it would be the suggested mean, even if better options exist.
+\item
+Travel means can be subjected to different type of constraints, some chosen by the user other by the application.
+\item
+Travel means are classified by their footprint level.Travel passes can be of different types:
+\begin{enumerate}
+\item
+Single trip.
+\item
+Daily pass.
+\item
+Weekly pass.
+\item
+Monthly pass.
+\item
+Yearly pass.
+\end{enumerate}
+
+\item
+A travel pass can be used only for one transportation mean. This means taht a bus ticket can't be used for a tram journey.
+\item
+Single trip tickets are not named and can be bought without owning an account on the website of the service provider.
+\item
+Cars and Bike are of two types: shared and owned.
+\item
+At least one vehicle of a sharing system can always be found within a 10 minute walk.
+\item
+Each vehicle of a sharing system can be located through GPS.
+\item
+During a single journey, many different travel means can be used.
+\item
+Public transports are always on time.
+\item
+Strikes or public transportation fault are communicated on the website of the service provider. 
+\item
+The system suggests to the user the best journey that complies with the users preferences.
+\item
+Meetings can be of three types: family, work and personal.
+\item
+The server is used for account related purposes and as backup.
+\item
+When a new meeting is created, the application synchronizes the schedule with the server.
+\item
+If when a new meeting is created the connection to the server isn't available, the meeting is created anyhow and the synchronization will be done when the connection returns.
+\item
+If a conflict is generated when the user tries to change the time slot dedicated to a break, a warning is shown and the change fordbidden.
 \end{list}
