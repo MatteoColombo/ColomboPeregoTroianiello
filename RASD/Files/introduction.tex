@@ -1,53 +1,28 @@
 \subsection{Purpose}
-This document is the baseline for project planning and for software evaluation of Travlendar+; it describes the system in terms of functional and nonfunctional requirements, analysing the needs of the customer in order to model the system.
-
+This document is the baseline for project planning and for software evaluation of Travlendar+; it describes the system in terms of functional and nonfunctional requirements, analysing the needs of the customer in order to model the system.\\
 Travlendar+ is a calendar-based application for people who have problems with scheduling working and personal appointments at various locations all across Milan. The application aims at simplifying the life of people by automatically computing travels and by organizing the daily schedules.
 
 \subsection{Scope}
 Travlendar+ is a calendar-based application whose purpose is to help people to easily schedule working or personal meetings around Milan.
-
-The system-to-be will allow users to plan travels and meetings without worrying of being late or to miss lunch and, thanks to its high customizability, people will be able to save a lot of time. Alerts will be given when meetings are created at unreachable locations and travel means will be computed depending on day hours and weather.
-
-\subsubsection{Current System}
-Travlendar+ will rely on many online services provided by other companies.\\
-An existing payment system will be implemented, as well as a maps and weather service that will be used to compute the best travel means.
-
-The journeys will use public transports, trains and bike sharing systems that are already present in the city.
-
-\newcounter{gcount1}
-\subsubsection{Goals}
-\begin{list}
-{\bfseries{}[G.\arabic{gcount1}]~}
-{
-\usecounter{gcount1}
-}
-\item Users can create an account.
-\item
-Allow the users to create meetings.
-\item
-Show warnings in case of unreachable appointments.
-\item
-Suggest travel means depending on the appointment and the day.
-\item
-Allow the users to select preferences and to filter options.
-\item
-Schedule the users’ lunch break.
-\item
-Allow the users to schedule breaks during the day.
-\item
-Assist the users during the travel
-
-\end{list}
+Travlendar+ is intended to all people that they need to organize your daily events and movements. The system-to-be will allow users to plan travels and meetings without worrying of being late or to miss lunch and, thanks to its high customizability, people will be able to save a lot of time. Alerts will be given when meetings are created at unreachable locations and travel means will be computed depending on day hours and weather.
 
 \subsection{Definitions, Acronyms, Abbreviations}
 
-\subsection{Definitions}
+\subsubsection{Definitions}
 \renewcommand{\labelitemi}{$-$}
 \begin{itemize}
 \item
 Schedule: set of meetings of the same day.
 \item
 Calendar: set of the schedules and from this you can select a specific schedule.
+\item
+Meeting: event in the scudule of the user that has a location and a start and end hour.
+\item
+Break: event in the schedule that has a personalized slot time when can occour and a minimum duration time.
+\item
+Lunch: it's a particular break with no personalized slot time and minimum duration of 30 minutes.
+\item
+Travel pass: rappresented all type of pass (single ticket, day/week/season pass) for public transportations.
 \end{itemize}
 
 
@@ -73,11 +48,13 @@ $[$R.x.y$]$: the requirement number y of the goal x
 $[$D.x$]$: the domain assumption number x
 \end{itemize}
 
-\subsection{Documents References}
+\subsection{Reference Documents}
 \renewcommand{\labelitemi}{$-$}
 \begin{itemize}
 \item
 Specification Document: “Mandatory Project Assignments.pdf”.
 \item
 \href{http://ieeexplore.ieee.org/servlet/opac?punumber=6146377}{\color{Black}{IEEE Std 29148-2011 - ISO/IEC/IEEE International Standard - Systems and software engineering}}
+\item
+Alloy Specification: "Alloy.pdf".
 \end{itemize}
