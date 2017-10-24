@@ -7,20 +7,29 @@
 \caption{Use Case Diagram}
 \label{ref:usecasediagram}
 \end{figure}
+
+\clearpage
 \subsubsection{Use Case Descriptions}
 
 In this section are listed some common or significant use cases derivable from
 the Use Case diagram.
 
 %Visitor's registration%
-\begin{table}
-\begin{tabular} { p{5cm} p{8cm} } 
-\multicolumn{2}{c}{\textbf{Visitor's registration}}\\
+\begin{center}
+\begin{longtable}{p{5cm} p{8cm}}
+\multicolumn{2}{ c }{\textbf{Visitor's registration}} \\ \hline 
+\endfirsthead
+\endhead
+\multicolumn{2}{ c }{{Continued on next page}} \\ \hline
+\endfoot
 \hline
+\caption{Visitor's registration}
+\label{ref:visitorsregistration}
+\endlastfoot
 \textbf{Actors:} & Visitor \\ 
 \textbf{Goals:} & G.1 \\ 
 \textbf{Input conditions:} & The visitor is on the home page. \\
-\textbf{Event flow:} & \begin{enumerate}
+\textbf{Event flow:} &  \begin{enumerate}
 						\item
 						The visitor clicks any button and is redirected to the login page.
 						\item
@@ -46,18 +55,21 @@ the Use Case diagram.
 						The server is unreachable.
 					\end{enumerate}
 All exceptions are handled notifying the issue to the visitor and taking back the Event Flow to the point 2. \\
-\hline
-\end{tabular}
-\caption{Visitor's registration}
-\label{ref:visitorsregistration}
-\end{table}
-\clearpage
+\end{longtable}
+\end{center}
 
 %User's login%
-\begin{table}
-\begin{tabular} { p{5cm} p{8cm} } 
-\multicolumn{2}{c}{\textbf{User's login}}\\
+\begin{center}
+\begin{longtable}{p{5cm} p{8cm}}
+\multicolumn{2}{ c }{\textbf{User's login}} \\ \hline 
+\endfirsthead
+\endhead
+\multicolumn{2}{ c }{{Continued on next page}} \\ \hline
+\endfoot
 \hline
+\caption{User's login}
+\label{ref:userslogin}
+\endlastfoot
 \textbf{Actors:} & User \\ 
 \textbf{Goals:} & G.1 \\ 
 \textbf{Input conditions:} & The user is on the login page. \\
@@ -78,18 +90,21 @@ home page.\\
 				The server is unreachable.
 			\end{enumerate}
 All exceptions are handled notifying the issue to the user and taking back the Event Flow to the point 1. \\
-\hline
-\end{tabular}
-\caption{User's login}
-\label{ref:userslogin}
-\end{table}
-\clearpage
+\end{longtable}
+\end{center}
 
 %User creates a meeting%
-\begin{table}
-\begin{tabular} { p{5cm} p{8cm} }  
-\multicolumn{2}{c}{\textbf{Create a meeting}}\\
+\begin{center}
+\begin{longtable}{p{5cm} p{8cm}}
+\multicolumn{2}{ c }{\textbf{Create a meeting}} \\ \hline 
+\endfirsthead
+\endhead
+\multicolumn{2}{ c }{{Continued on next page}} \\ \hline
+\endfoot
 \hline
+\caption{Create a meeting}
+\label{ref:createameeting}
+\endlastfoot
 \textbf{Actors:} & User \\ 
 \textbf{Goals:} & G.2, G.3 \\ 
 \textbf{Input conditions:} & The user is already logged into the system and is into the schedule page. \\
@@ -118,18 +133,21 @@ meeting page.\\
 These exceptions are handled notifying the issue to the user and taking back the Event Flow to the point 2.
 If the meeting is unreachable, this use case is extended by "Resolve the problem of unreachable meeting".
 \\
-\hline
-\end{tabular}
-\caption{Create a meeting}
-\label{ref:createameeting}
-\end{table}
-\clearpage
+\end{longtable}
+\end{center}
 
 %Resolve the problem of unreachable meeting%
-\begin{table}
-\begin{tabular} { p{5cm} p{8cm} }  
-\multicolumn{2}{c}{\textbf{Resolve the problem of unreachable meeting}}\\
+\begin{center}
+\begin{longtable}{p{5cm} p{8cm}}
+\multicolumn{2}{ c }{\textbf{Resolve the problem of unreachable meeting}} \\ \hline 
+\endfirsthead
+\endhead
+\multicolumn{2}{ c }{{Continued on next page}} \\ \hline
+\endfoot
 \hline
+\caption{Resolve the problem of unreachable meeting}
+\label{ref:resolvetheproblemofunreachablemeeting}
+\endlastfoot
 \textbf{Actor:} & User \\ 
 \textbf{Goals:} & G.2, G.3 \\ 
 \textbf{Input conditions:} & The user is creating a meeting and this is unreachable.\\
@@ -138,17 +156,22 @@ If the meeting is unreachable, this use case is extended by "Resolve the problem
 meeting page.\\ 
 \textbf{Exception:} & All exceptions are the same as those the use case "Create a meeting". \\
 \hline
-\end{tabular}
-\caption{Resolve the problem of unreachable meeting}
-\label{ref:resolvetheproblemofunreachablemeeting}
-\end{table}
-\clearpage
+\end{longtable}
+\end{center}
 
 %User travels to the meeting%
-\begin{table}
-\begin{tabular} { p{5cm} p{8cm} }  
-\multicolumn{2}{c}{\textbf{Travel to the meeting}}\\
+\begin{center}
+\begin{longtable}{p{5cm} p{8cm}}
+\multicolumn{2}{ c }{\textbf{Travel to the meeting}} \\ \hline 
+\endfirsthead
+\endhead
+\multicolumn{2}{ c }{{Continued on next page}} \\ \hline
+\endfoot
 \hline
+\caption{Travel to the meeting}
+\label{ref:traveltothemeeting}
+\endlastfoot
+
 \textbf{Actors:} & User \\ 
 \textbf{Goals:} & G.4, G.8 \\ 
 \textbf{Input conditions:} & The user is already logged into the system and is into the schedule page. \\
@@ -174,17 +197,22 @@ schedule.\\
 			\end{enumerate}
 All exceptions are handled notifying the issue to the user and taking back the Event Flow to the point 1. \\
 \hline
-\end{tabular}
-\caption{Travel to the meeting}
-\label{ref:traveltothemeeting}
-\end{table}
-\clearpage
+\end{longtable}
+\end{center}
 
 %User selects preferences and filters options%
-\begin{table}
-\begin{tabular} { p{5cm} p{8cm} }
-\multicolumn{2}{c}{\textbf{Setup preferences}} \\
+\begin{center}
+\begin{longtable}{p{5cm} p{8cm}}
+\multicolumn{2}{ c }{\textbf{Setup preferences}} \\ \hline 
+\endfirsthead
+\endhead
+\multicolumn{2}{ c }{{Continued on next page}} \\ \hline
+\endfoot
 \hline
+\caption{Setup preferences}
+\label{ref:setuppreferences}
+\endlastfoot
+
 \textbf{Actors:} & User \\ 
 \textbf{Goals:} & G.5, G.7 \\ 
 \textbf{Input conditions:} & The user is already logged into the system and is into the home page. \\
@@ -203,12 +231,10 @@ All exceptions are handled notifying the issue to the user and taking back the E
 			\end{enumerate}
 All exceptions are handled notifying the issue to the user and taking back the Event Flow to the point 2. \\
 \hline
-\end{tabular}
-\caption{Setup preferences}
-\label{ref:setuppreferences}
-\end{table}
-\clearpage
+\end{longtable}
+\end{center}
 
+\clearpage
 \subsubsection{Sequence Diagrams}
 
 \begin{figure}[!h]
