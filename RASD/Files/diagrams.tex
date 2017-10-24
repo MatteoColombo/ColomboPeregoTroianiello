@@ -1,22 +1,12 @@
 \subsection{Functional Requirements}
- 
-\subsubsection{Class Diagram}
-\begin{figure}[!htb]
-\centering
-\includegraphics[scale=0.4]{images/ClassDiagram}
-\caption{Class Diagram}
-\label{ref:classdiagram}
-\end{figure}
- 
-\clearpage
+
 \subsubsection{Use Case Diagram}
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=0.4]{images/UseCaseDiagram}
+\includegraphics[scale=0.8]{images/UseCaseDiagram}
 \caption{Use Case Diagram}
 \label{ref:usecasediagram}
 \end{figure}
-\clearpage
 \subsubsection{Use Case Descriptions}
 
 In this section are listed some common or significant use cases derivable from
@@ -27,7 +17,7 @@ the Use Case diagram.
 \begin{tabular} { p{5cm} p{8cm} } 
 \multicolumn{2}{c}{\textbf{Visitor's registration}}\\
 \hline
-\textbf{Actor:} & Visitor \\ 
+\textbf{Actors:} & Visitor \\ 
 \textbf{Goals:} & G.1 \\ 
 \textbf{Input conditions:} & The visitor is on the home page. \\
 \textbf{Event flow:} & \begin{enumerate}
@@ -61,12 +51,14 @@ All exceptions are handled notifying the issue to the visitor and taking back th
 \caption{Visitor's registration}
 \label{ref:visitorsregistration}
 \end{table}
+\clearpage
 
 %User's login%
+\begin{table}
 \begin{tabular} { p{5cm} p{8cm} } 
 \multicolumn{2}{c}{\textbf{User's login}}\\
 \hline
-\textbf{Actor:} & User \\ 
+\textbf{Actors:} & User \\ 
 \textbf{Goals:} & G.1 \\ 
 \textbf{Input conditions:} & The user is on the login page. \\
 \textbf{Event flow:} & \begin{enumerate}
@@ -88,12 +80,17 @@ home page.\\
 All exceptions are handled notifying the issue to the user and taking back the Event Flow to the point 1. \\
 \hline
 \end{tabular}
+\caption{User's login}
+\label{ref:userslogin}
+\end{table}
+\clearpage
 
 %User creates a meeting%
+\begin{table}
 \begin{tabular} { p{5cm} p{8cm} }  
 \multicolumn{2}{c}{\textbf{Create a meeting}}\\
 \hline
-\textbf{Actor:} & User \\ 
+\textbf{Actors:} & User \\ 
 \textbf{Goals:} & G.2, G.3 \\ 
 \textbf{Input conditions:} & The user is already logged into the system and is into the schedule page. \\
 \textbf{Event flow:} & \begin{enumerate}
@@ -123,8 +120,13 @@ If the meeting is unreachable, this use case is extended by "Resolve the problem
 \\
 \hline
 \end{tabular}
+\caption{Create a meeting}
+\label{ref:createameeting}
+\end{table}
+\clearpage
 
 %Resolve the problem of unreachable meeting%
+\begin{table}
 \begin{tabular} { p{5cm} p{8cm} }  
 \multicolumn{2}{c}{\textbf{Resolve the problem of unreachable meeting}}\\
 \hline
@@ -137,12 +139,17 @@ meeting page.\\
 \textbf{Exception:} & All exceptions are the same as those the use case "Create a meeting". \\
 \hline
 \end{tabular}
+\caption{Resolve the problem of unreachable meeting}
+\label{ref:resolvetheproblemofunreachablemeeting}
+\end{table}
+\clearpage
 
 %User travels to the meeting%
+\begin{table}
 \begin{tabular} { p{5cm} p{8cm} }  
 \multicolumn{2}{c}{\textbf{Travel to the meeting}}\\
 \hline
-\textbf{Actor:} & User \\ 
+\textbf{Actors:} & User \\ 
 \textbf{Goals:} & G.4, G.8 \\ 
 \textbf{Input conditions:} & The user is already logged into the system and is into the schedule page. \\
 \textbf{Event flow:} & \begin{enumerate}
@@ -168,12 +175,17 @@ schedule.\\
 All exceptions are handled notifying the issue to the user and taking back the Event Flow to the point 1. \\
 \hline
 \end{tabular}
+\caption{Travel to the meeting}
+\label{ref:traveltothemeeting}
+\end{table}
+\clearpage
 
 %User selects preferences and filters options%
+\begin{table}
 \begin{tabular} { p{5cm} p{8cm} }
 \multicolumn{2}{c}{\textbf{Setup preferences}} \\
 \hline
-\textbf{Actor:} & User \\ 
+\textbf{Actors:} & User \\ 
 \textbf{Goals:} & G.5, G.7 \\ 
 \textbf{Input conditions:} & The user is already logged into the system and is into the home page. \\
 \textbf{Event flow:} & \begin{enumerate}
@@ -192,6 +204,48 @@ All exceptions are handled notifying the issue to the user and taking back the E
 All exceptions are handled notifying the issue to the user and taking back the Event Flow to the point 2. \\
 \hline
 \end{tabular}
-
+\caption{Setup preferences}
+\label{ref:setuppreferences}
+\end{table}
+\clearpage
 
 \subsubsection{Sequence Diagrams}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.6]{images/VisitorRegistrationDiagram}
+\caption{Visitor Registration Diagram}
+\label{ref:visitorregistrationdiagram}
+\end{figure}
+
+\clearpage
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.5]{images/UserLoginDiagram}
+\caption{User Login Diagram}
+\label{ref:userlogindiagram}
+\end{figure}
+
+\clearpage
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.6]{images/CreateMeetingDiagram}
+\caption{Create Meeting Diagram}
+\label{ref:createmeetingdiagram}
+\end{figure}
+
+\clearpage
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.7]{images/TravelToTheMeetingDiagram}
+\caption{Travel To The Meeting Diagram}
+\label{ref:traveltothemeetingdiagram}
+\end{figure}
+
+\clearpage
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.6]{images/SetupPreferencesDiagram}
+\caption{Setup Preferences Diagram}
+\label{ref:setupprefencesdiagram}
+\end{figure}
