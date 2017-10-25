@@ -56,8 +56,6 @@ For communications we use the TCP protocol on port 80 for HTTP,port 443 for HTTP
 100\% of the requests should be processed within 20 seconds.
 \item
 There is no limit to the total number of the registered users.
-\item
-
 \end{enumerate}
 
 \subsection{Design Constraints}
@@ -71,10 +69,11 @@ In case of downtime, as long as the user is logged in the application, the fault
 The system is required to have a 99\% uptime. Most scheduled downtimes must occur in the weekends at night time.
 
 \subsubsection{Security}
-All the communications between the clients and the server will be encrypted and protected by using the SSL protocol.
+All the communications between the clients and the server will be encrypted and protected by using the SSL protocol.All attempts of establishing an unsecure communication channel with the server must be refused.
 All the information will be stored on the server and security will have high priority; users’ passwords will not be stored in plain text.
 
 \subsubsection{Maintainability}
+The code should be documented using JavaDoc in order to enable other developers to easily understand and edit it. The system must provide a configurable logging function for debugging purposes. The development of the software will follow the object-oriented Model-View-Controller pattern and the principles of separation of concerns. The source code management should be done through a Version Control System (e.g. git).
 
 \subsubsection{Portability}
 The backend will be developed in Java so that it will be possible to run the application on every machine that supports Java Virtual Machine.
