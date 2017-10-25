@@ -10,6 +10,23 @@ The application proposes only the best route for each travel that complies with 
 During the journey, the application will assist the users by showing them the correct route or noticing them when they have to get off from public services.
 Furthermore, through an external payment system, users are able to buy travel passes for their travels and visualize them directly in the application.
 
+\subsubsection{Class Diagram}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.45]{images/classdiagram}
+\caption{Class Diagram}
+\label{fig:classdiagram}
+\end{figure}
+
+
+\begin{sidewaysfigure}
+    \centering
+	\includegraphics[scale=0.6]{images/classdiagram}
+	\caption{Class Diagram}
+	\label{fig:classdiagramrotate}
+\end{sidewaysfigure}
+
+\clearpage
 
 \subsection{Product Functions}
 
@@ -20,77 +37,97 @@ Furthermore, through an external payment system, users are able to buy travel pa
 {
 \usecounter{gcount}
 }
-	\item Users can create an account.
-    \item Allow the users to create meetings.
-	\begin{list}
+\item Visitors can create an account.
+\begin{list}
 	{\bfseries{}[R.\arabic{gcount}.\arabic{rcount}]~}
 	{
 	\usecounter{rcount}
 	}
-        \item To create a meeting, the user must be logged in the application with an active account.
-        \item Each meeting must have a location, which can be either an address or coordinates.
-        \item Each meeting must have a starting and ending hour.
-        \item Each meeting must have a name.
-        \item Each meeting must have a type.
+\item An account requires an username.
+\item An account requires an email address.
+\item An account requires a password.
+\item The email address must be unique.
+\end{list}
+\item Users can create new meetings.
+\begin{list}
+	{\bfseries{}[R.\arabic{gcount}.\arabic{rcount}]~}
+	{
+	\usecounter{rcount}
+	}
+	\item The user must be logged in the application.
+\item A meeting requires a location, which is either coordinates or an address.
+\item A meeting requires a starting and ending hour.
+\item A meeting requires a name.
+\item A meeting requires a type.
+\item A meeting may have a description.
+\end{list}
+\item Warnings are shown in case a new meeting is unreachable or causes conflicts.
+\begin{list}
+	{\bfseries{}[R.\arabic{gcount}.\arabic{rcount}]~}
+	{
+	\usecounter{rcount}
+	}
+\item A warning should be given at the creation of a meeting if it is unreachable or if it is causes conflicts.
+\item A warning should be given in case of exceptional events that make one or more meetings unreachable.
+\item A warning doesn’t forbid the user to force the creation of a meeting.
+\end{list}
+\item Travel means are suggested depending on different constraints.
+\begin{list}
+	{\bfseries{}[R.\arabic{gcount}.\arabic{rcount}]~}
+	{
+	\usecounter{rcount}
+	}
+\item Different travel means should be suggested depending on the weather conditions.
+\item Different type of meetings should be reached with different/specific travel means
+\item Different travel means should be suggested depending on the hour of the day.
+\item Travel means chan have constraints on the length of their journey section.
+\end{list}
+\item Users can set their preferences and select between different options.
+\begin{list}
+	{\bfseries{}[R.\arabic{gcount}.\arabic{rcount}]~}
+	{
+	\usecounter{rcount}
+	}
+\item The application must support different travel means and transportation systems.
+\item Users can select constraints on travel means.
+\item The application must show results consistent with the users preferences.
+\item Users should be able to specify the travel passes they own.
+\item Users must specify their home address.
+	\item Users can disable travel means.
+	\item Users can enable the option to minimize air pollution.
     \end{list}
-    \item Show warnings in case of unreachable appointments.
-    \begin{list}
+\item Lunch breaks are automatically scheduled by the application.
+\begin{list}
 	{\bfseries{}[R.\arabic{gcount}.\arabic{rcount}]~}
 	{
 	\usecounter{rcount}
 	}
-        \item A warning is given when scheduling a meeting, if the location is unreachable with the available travel means.
-        \item In case of strikes or exceptional events (e.g. train failures), a warning is given to the user. 
-        \item Users can create meetings even if a warning is shown.
-    \end{list}
-    \item Suggest travel means depending on the appointment and the day.
-    \begin{list}
+\item The minimum length of a lunch break is 30 minutes.
+\item The lunch break must be scheduled between 11.30 am and 2.30pm.
+\end{list}
+\item Users can add custom breaks that are automatically scheduled.
+\begin{list}
 	{\bfseries{}[R.\arabic{gcount}.\arabic{rcount}]~}
 	{
 	\usecounter{rcount}
 	}
-        \item Weather conditions must be taken in account when proposing a travel system.
-        \item Different kind of appointments will be reached with different travel means.
-    \end{list}
-    \item Allow the users to select preferences and to filter options.
-    \begin{list}
+\item The minimum length of a lunch break is 5 minutes.
+\item Users can set as many breaks as they want.
+\item Users can select the time slot in which they want their break to be scheduled.
+\end{list}
+\item Users are assisted during their journey.
+\begin{list}
 	{\bfseries{}[R.\arabic{gcount}.\arabic{rcount}]~}
 	{
 	\usecounter{rcount}
 	}
-        \item The application must support many travel means and transport systems.
-		\item Travel means may be subject to constraints (e.g. user can walk for at most 500m).
-		\item Application must show results consistent with the user’s preferences.
-		\item Users should be allowed to specify their own passes.
-		\item Users should be able to specify their home address.
-    \end{list}
-    \item Schedule the users’ lunch break.
-    \begin{list}
-	{\bfseries{}[R.\arabic{gcount}.\arabic{rcount}]~}
-	{
-	\usecounter{rcount}
-	}
-        \item The minimum lunch break duration must be 30 minutes. 
-		\item Users must be able to select a time slot in which lunch should be scheduled.
+\item The application should notify the user when he has to get off from a transportation system.
+\item The applications should give directions to the users when they are driving, cycling or walking.
+\item Users can buy travel passes through the application.
+\item The application must locate the nearest vehicle of the selected sharing system.
+\end{list}
 
-    \end{list}
-    \item Allow the users to schedule breaks during the day.
-    \begin{list}
-	{\bfseries{}[R.\arabic{gcount}.\arabic{rcount}]~}
-	{
-	\usecounter{rcount}
-	}
-        \item The minimum break duration must be 5 minutes.
-    \end{list}
-    \item Assist the users during the travel.
-    \begin{list}
-	{\bfseries{}[R.\arabic{gcount}.\arabic{rcount}]~}
-	{
-	\usecounter{rcount}
-	}
-	\item Users should be able to buy transportation tickets.
-	\item The system must locate the nearest vehicle of the selected sharing system. 
-	\end{list}
+
 \end{list}
 
 \subsection{User Characteristics}
