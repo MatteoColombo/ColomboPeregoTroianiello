@@ -129,33 +129,11 @@ meeting page.\\
 				Exists an another meeting with the same hours. 
 				\item
 				Travel mean is unavailable. 
+				\item
+				Meeting is unreachable.
 			\end{enumerate}
-These exceptions are handled notifying the issue to the user and taking back the Event Flow to the point 2.
-If the meeting is unreachable, this use case is extended by "Resolve the problem of unreachable meeting".
+All exceptions are handled notifying the issue to the user and taking back the Event Flow to the point 2.
 \\
-\end{longtable}
-\end{center}
-
-%Resolve the problem of unreachable meeting%
-\begin{center}
-\begin{longtable}{p{5cm} p{8cm}}
-\multicolumn{2}{ c }{\textbf{Resolve the problem of unreachable meeting}} \\ \hline 
-\endfirsthead
-\endhead
-\multicolumn{2}{ c }{{Continued on next page}} \\ \hline
-\endfoot
-\hline
-\caption{Resolve the problem of unreachable meeting}
-\label{ref:resolvetheproblemofunreachablemeeting}
-\endlastfoot
-\textbf{Actor:} & User \\ 
-\textbf{Goals:} & G.2, G.3 \\ 
-\textbf{Input conditions:} & The user is creating a meeting and this is unreachable.\\
-\textbf{Event flow:} & The applicaiton shows a warning message and the user can either click "Edit" to change the meeting information or click "Create" and continue creating the meeting even if it is unreachable in time.\\ 
-\textbf{Output conditions:} & The user is successfully redirected to the
-meeting page.\\ 
-\textbf{Exception:} & All exceptions are the same as those the use case "Create a meeting". \\
-\hline
 \end{longtable}
 \end{center}
 

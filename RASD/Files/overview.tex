@@ -69,7 +69,7 @@ Furthermore, through an external payment system, users are able to buy travel pa
 	}
 \item A warning should be given at the creation of a meeting if it is unreachable or if it is causes conflicts.
 \item A warning should be given in case of exceptional events that make one or more meetings unreachable.
-\item A warning doesn’t forbid the user to force the creation of a meeting.
+\item A warning forbids the user to force the creation of a meeting.
 \end{list}
 \item Travel means are suggested depending on different constraints.
 \begin{list}
@@ -200,8 +200,8 @@ The minimum duration of a break is 5 minutes.
 \item
 A meeting is always associated to a position.
 \item
-When a user adds a new meeting, if the application detects that it causes one of the following errors, e can either choose to force the creation of the meeting or edit it and change the parameters.
-Errors:
+When a user adds a new meeting, if the application detects that it causes one of the following errors, it forces the user to edit the information of the meeting. Errors:
+
 \begin{enumerate}
 \item
 The meeting overlaps with another.
@@ -213,10 +213,7 @@ The meeting makes another unreachable.
 The meeting doesn't leave enough time for lunch.
 \end{enumerate}
 
-\item
-If the user decides to force the creation of the meeting even if the application returns a warning, it is his responsibility to reach the location in time.
-\item
-In case the user decides to force the creation of a meeting that doesn’t leave enough time for lunch, the time for the lunch break is not reserved.
+
 \item
 In case of a long travel that overlaps with the lunch break and doesn’t give enough time to the lunch in (but there is enough time after the lunch slot), it may be splitted in two parts, separated by the break. The same applies for afternoon/morning breaks.
 \item
