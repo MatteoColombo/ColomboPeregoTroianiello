@@ -11,6 +11,9 @@ During the journey, the application will assist the users by showing them the co
 Furthermore, through an external payment system, users are able to buy travel passes for their travels and visualize them directly in the application.
 
 \subsubsection{Class Diagram}
+The classes Event, Public Transportation, Travel Mean, Owned Vehicle and Shared Vehicle are abstract.\\
+The classes that implement/extend Constraint, Level, Owned Mean, Shared Mean and Public Transportation are omitted for clarity.
+
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.45]{images/classdiagram}
@@ -246,7 +249,7 @@ Yearly pass.
 \end{enumerate}
 
 \item
-A travel pass can be used only for one transportation mean. This means that a bus ticket can't be used for a tram journey.
+A travel pass can be used only for one transportation mean. For example, a bus ticket can't be used for a tram journey.
 \item
 Cars and Bike are of two types: shared and owned.
 \item
