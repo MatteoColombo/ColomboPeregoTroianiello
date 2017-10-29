@@ -215,8 +215,10 @@ fact journeyNumber{
 
 //Checks that all events are disjoint
 assert allEventsDisjoint{
-	no disj e1,e2: Event | (e2.start.timestamp > e1.start.timestamp &&  e2.start.timestamp < e1.end.timestamp)
-											|| (e2.end.timestamp > e1.start.timestamp &&  e2.end.timestamp < e1.end.timestamp)
+	no disj e1,e2: Event | (e2.start.timestamp > e1.start.timestamp 
+											&&  e2.start.timestamp < e1.end.timestamp)
+											|| (e2.end.timestamp > e1.start.timestamp 
+											&&  e2.end.timestamp < e1.end.timestamp)
 }
 
 //Checks that if on a day there is a meeting, there is a lunch
@@ -226,7 +228,8 @@ assert ifThereIsAMeetingThereIsLunch{
 
 //Checks that the lunch is always scheduled in the range
 assert lunchIsAlwaysInTheLunchSlot{
-	no l:Lunch | l.start.timestamp < l.slotstart.timestamp ||  l.end.timestamp > l.slotend.timestamp
+	no l:Lunch | l.start.timestamp < l.slotstart.timestamp 
+						||  l.end.timestamp > l.slotend.timestamp
 }
 
 //Checks that the journey that leaves from home is the first of the day
@@ -236,14 +239,16 @@ assert journeyFromHomeFirstOfTheDay{
 
 //Checks that tickets used in a segment are valid
 assert usedTicketsAreValidDuringTheSegment{
-	all s:Segment | #s.pass = 1 implies s.pass.start.day <= s.journey.day && s.pass.end.day >= s.journey.day
+	all s:Segment | #s.pass = 1 implies s.pass.start.day <= s.journey.day 
+																	&& s.pass.end.day >= s.journey.day
 }
 
 /*
 	PREDICATES
 */
 /*This generated a simplified world,
- with the schedule of one day in which there are 2 meetings and three segments along two journeys
+	with the schedule of one day in which there are 2 meetings and three segments
+	 along two journeys
 */
 pred show(){
 	(Meeting.start).day=3
