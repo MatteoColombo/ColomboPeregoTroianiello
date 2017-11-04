@@ -1,0 +1,96 @@
+\input{commandsFile}
+
+\begin{document}
+
+\begin{titlepage}
+	\begin{center}
+		\line(1,0){400}\\	[0.6cm]
+		\Huge{\bfseries{TRAVLENDAR+}}\\
+		\line(1,0){400}\\
+		[3cm]
+		\includegraphics[scale=0.3]{Images/polimi}\\
+		[3cm]
+		\textsc{\Huge Design Document}\\[1cm]
+		\textsc{\huge 26/11/2017 - v1.0}\\
+		[4cm]
+		\textsc{\normalsize Matteo Colombo \hspace{0.4cm} Alessandro Perego \hspace{0.4cm} Andrea Troianiello }
+	\end{center}
+\end{titlepage}
+	
+%Deliverable specific info
+\begin{table}[h!]
+\begin{tabu} to \textwidth { X[0.3,r,p] X[0.7,l,p] }
+\hline
+
+\textbf{Deliverable:} & RASD\\
+\textbf{Title:} & Design Document \\
+\textbf{Authors:} & Matteo Colombo, Alessandro Perego, Andrea Troianiello \\
+\textbf{Version:} & 1.0 \\ 
+\textbf{Date:} & 26-November-2017 \\
+\textbf{Download page:} & \href{https://github.com/MatteoColombo/ColomboPeregoTroianiello}{\color{Black}{GitHub - ColomboPeregoTroianiello repository}} \\
+\hline
+\end{tabu}
+\end{table}
+
+%------table of contents------%
+\clearpage
+\tableofcontents
+\listoffigures
+\listoftables
+
+
+%------ CONTENT ------%
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\clearpage
+{\section{Introduction}}
+\label{sect:introduction}
+\input{files/introduction}
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\clearpage
+{\section{Architectural Design}}
+\label{sect:architecturaldesign}
+\input{files/architecturaldesign}
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\clearpage
+{\section{Algorithm Design}}
+\label{sect:algorithm}
+\input{files/algorithmdesign}
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\clearpage
+{\section{User Interface Design}}
+\label{sect:uidesign}
+\input{files/UIdesign}
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\clearpage
+{\section{Requirements Traceability}}
+\label{sect:requirements}
+\input{files/requirements}
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\clearpage
+{\section{Implementation, Integration and Test Plan}}
+\label{sect:implinttest}
+\input{files/implIntTest}
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\clearpage
+{\section{Effort Spent}}
+\label{sect:effort}
+\input{files/effort}
+
+
+%------------------------------------------------------------------------------------------------------------------------------------------------
+\clearpage
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{plain}
+\bibliography{dd}
+%------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+\end{document}
