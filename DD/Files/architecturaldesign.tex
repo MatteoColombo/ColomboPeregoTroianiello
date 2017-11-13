@@ -1,0 +1,33 @@
+\subsection{Overview: High-level components and their interaction}
+This chapter describes the system components both at the physical and logical level.
+The main high level components of the system are the following:
+\begin{itemize}
+\item
+\textbf{Database:} The database server which is responsible for the data storage and retrieval. It doesn’t implement any logic as it is used only for data storing purposes. This layer must guarantee that the ACID properties are respected.
+\item
+\textbf{Application server:}  The application server contains all the logic on the server side of the system. This layer implements RESTful APIs and is used for registrations, login, backup and restore purposes.
+\item
+\textbf{Mobile Application:} The application consists in the client side of the application. It is installed on the users’ devices and implements most of the logic of the system. 
+For the account/backup purposes it communicates directly with the application server, while for all the other functions is standalone.
+\end{itemize}
+The components are structured in a three layer application, shown in the following figure.
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.8]{images/highlevelstructure}
+\caption{High Level Structure}
+\label{ref:highlevelstructure}
+\end{figure}
+
+\clearpage
+\subsection{Component View}
+\input{files/componentview}
+
+\clearpage
+\subsection{Deployment View}
+This diagram purpose is to show the hardware components of our system and where the code is going to run.
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.4]{images/DeploymentDiagram}
+\caption{Deployment Diagram}
+\label{ref:deploymentdiagram}
+\end{figure}
