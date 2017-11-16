@@ -31,3 +31,23 @@ This diagram purpose is to show the hardware components of our system and where 
 \caption{Deployment Diagram}
 \label{ref:deploymentdiagram}
 \end{figure}
+
+\clearpage
+\subsection{Runtime View}
+
+\clearpage
+\subsection{Component Interfaces}
+
+\clearpage
+\subsection{Selected Architectural styles and patterns}
+The following architectural styles have been used:
+\begin{itemize}
+\item
+\textbf{Model-Control-View:} It is used for the main components of the system. It’s a really good choice of design that allows to keep clear the role of every component and that makes the system easier to deploy and maintain.
+\item
+\textbf{Client-Server:} This pattern is a good practice for a distributed system. It is used between the application server (client) queries the DB (server) and the application (client) communicates with the application server.
+\item
+\textbf{Service-oriented Architecture:} It is used by the system for the communication between the server and the user’s device (RESTful). The SOA allows to think at a higher level of abstraction, by looking at the component interfaces and not at their specific implementation. SOA style also improves modularity: by making service description, discovery and binding explicit, it is easier to build new plugins and test single modules independently.
+\item
+\textbf{Fat Client:} The fat client paradigm is implemented because the interaction between user’s device and the server hasn’t a central role in the system behavior . Having a fat client in our case is an advantage because most application logic is on the user’s device, which has sufficient computing power and is able to manage concurrency issue efficiently.
+\end{itemize}
