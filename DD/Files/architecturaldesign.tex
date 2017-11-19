@@ -36,52 +36,39 @@ This diagram purpose is to show the hardware components of our system and where 
 \subsection{Runtime View}
 
 \subsubsection{Visitor Registration}
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.25]{images/VisitorRegistration}
 \caption{Visitor Registration}
-\end{figure}
-\bigskip 
-\noindent
-In this runtime diagram you can see the registration process on the application. The informations are sent by the MobileApplication to the ViewController that send thirs to the specific manager, in this case the LoginManager. The LoginManager send the information to the DataManager and it check with the Model if the username or the email are already in use or not. The answer return from model to the LoginManager, in case of positive answer the LoginManager create an ID for the user and send all data to the DataManager that it put theirs in the Model and generate a positive response; in case of negative answer, the LoginManager generate a negative response. The response is passed to the MobileApplication that show a confirm or error dialog respectively in case of positive or negative response.
+\end{figure}In this runtime diagram you can see the registration process on the application. The informations are sent by the MobileApplication to the ViewController that send thirs to the specific manager, in this case the LoginManager. The LoginManager send the information to the DataManager and it check with the Model if the username or the email are already in use or not. The answer return from model to the LoginManager, in case of positive answer the LoginManager create an ID for the user and send all data to the DataManager that it put theirs in the Model and generate a positive response; in case of negative answer, the LoginManager generate a negative response. The response is passed to the MobileApplication that show a confirm or error dialog respectively in case of positive or negative response.
 
 \subsubsection{Login User}
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.25]{images/LoginUser}
 \caption{Login User}
-\end{figure}
-In this runtime diagram you can see the login process for a user that is already registered in the application. The login informations are sent by the ApplicationInterface to the ViewController that calls the LoginManager that checks if the parameters are typed correctly. If the parameters are not valid the LoginManager generates a negative response, if it is valid you can proceed with the login process and pass the data to the DataManager that makes a request to the server. The RequestDispatcher on the server manages the requests and checks the data in the DBMS passing by the DataAccessManager. In case of the data are present in the DBMS, the DataAccessManager generates a token and put this in the DBMS and after it generates a positive response; in case of the data are not present the DataAccessManager generates a negative response. In base of positive or negative response the ApplicationInterface show respectively the home page or an error message.
+\end{figure}In this runtime diagram you can see the login process for a user that is already registered in the application. The login informations are sent by the ApplicationInterface to the ViewController that calls the LoginManager that checks if the parameters are typed correctly. If the parameters are not valid the LoginManager generates a negative response, if it is valid you can proceed with the login process and pass the data to the DataManager that makes a request to the server. The RequestDispatcher on the server manages the requests and checks the data in the DBMS passing by the DataAccessManager. In case of the data are present in the DBMS, the DataAccessManager generates a token and put this in the DBMS and after it generates a positive response; in case of the data are not present the DataAccessManager generates a negative response. In base of positive or negative response the ApplicationInterface show respectively the home page or an error message.
 
 \subsubsection{Setup Preferences}
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.25]{images/SetupPreference}
 \caption{Setup Preferences}
-\end{figure}
-\par\bigskip 
-\noindent
-This diagram shows how the user can set your preferences in Travlendar+ application. The ApplicationInterface gives the all preferences setted by the user, to the ViewController that makes a request to the Configurator. Configurator is the component that deals to manage the preferences, it check the correctness of the data and if the data are it valid pass all to the DataManager that put their in the Model; if the data are not valid it generates a negative response. In base of respond show a confirmation or error message.
+\end{figure}This diagram shows how the user can set your preferences in Travlendar+ application. The ApplicationInterface gives the all preferences setted by the user, to the ViewController that makes a request to the Configurator. Configurator is the component that deals to manage the preferences, it check the correctness of the data and if the data are it valid pass all to the DataManager that put their in the Model; if the data are not valid it generates a negative response. In base of respond show a confirmation or error message.
 
 \subsubsection{Create Meeting}
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.25]{images/CreateMeeting}
 \caption{Create Meeting}
-\end{figure}
-\par\bigskip 
-\noindent
-This diagram shows the process to create a meeting by using the application. As usual the ApplicationInterface retrieves all information about the meeting that the user wants to create and pass them to the ViewController that call the EventManager component.The EventManager checks in the Model if the name already exists and if the new event has an overlap with an other event. If this is the case the event is defined not valid and the system sets the unreachable of the event. In the other situation the event is valid and the EventManager goes to check the reachability of the event. For check this, the JouerneyManager calls different components to retrieve informations that it needed; the WheaterSystem for weather information, the DataManager and the Model for the user’s options, the PublicTransportController for all informations about hours and availability of public transportations, the SharedController for all information about shared vehicle systems. After that the JourneyManager can call the NavigationController to calculate the travel in base of all informations that it has retrieved earlier. The NavigationController uses the GPSManager for location informations and returns the travel info to the JourneyManager that calculates the reachability of the event in base of the others event that the user has in his Model. Finally if the event is valid and reachable the EventManager save the meeting into the Model and return a response for the ApplicationInterface that show a confirm or an error message based on the received response.
+\end{figure}This diagram shows the process to create a meeting by using the application. As usual the ApplicationInterface retrieves all information about the meeting that the user wants to create and pass them to the ViewController that call the EventManager component.The EventManager checks in the Model if the name already exists and if the new event has an overlap with an other event. If this is the case the event is defined not valid and the system sets the unreachable of the event. In the other situation the event is valid and the EventManager goes to check the reachability of the event. For check this, the JouerneyManager calls different components to retrieve informations that it needed; the WheaterSystem for weather information, the DataManager and the Model for the user’s options, the PublicTransportController for all informations about hours and availability of public transportations, the SharedController for all information about shared vehicle systems. After that the JourneyManager can call the NavigationController to calculate the travel in base of all informations that it has retrieved earlier. The NavigationController uses the GPSManager for location informations and returns the travel info to the JourneyManager that calculates the reachability of the event in base of the others event that the user has in his Model. Finally if the event is valid and reachable the EventManager save the meeting into the Model and return a response for the ApplicationInterface that show a confirm or an error message based on the received response.
 
 \subsubsection{Travel to the Meeting}
-\begin{figure}[!h]
+\begin{figure}[H]
 \centering
 \includegraphics[scale=0.25]{images/TravelToTheMeeting}
 \caption{Travel to the Meeting}
-\end{figure}
-\par\bigskip 
-\noindent
-In this diagram you can see the travel to a meeting using a public transportation mean. The user starts the navigation in the ApplicationInterface that passes the relative journey to the JourneyManager passing by the ViewController and the EventManager. The journey manager request to the PublicTransportController the information of this journey. In that situation the user has the possibility to buy the ticket for public transportation by using the PaymentHandler. The JourneyManagar retrieve the indication by calling the NavigationController that uses the GPSManagar to take the position of the user, furthermore the NavigationController calculate the indications and returns these to the JourneyManager. The travel is saved into the Model and the ApplicationInterface show a dialog when the travel is finished.
+\end{figure}In this diagram you can see the travel to a meeting using a public transportation mean. The user starts the navigation in the ApplicationInterface that passes the relative journey to the JourneyManager passing by the ViewController and the EventManager. The journey manager request to the PublicTransportController the information of this journey. In that situation the user has the possibility to buy the ticket for public transportation by using the PaymentHandler. The JourneyManagar retrieve the indication by calling the NavigationController that uses the GPSManagar to take the position of the user, furthermore the NavigationController calculate the indications and returns these to the JourneyManager. The travel is saved into the Model and the ApplicationInterface show a dialog when the travel is finished.
 
 \clearpage
 \subsection{Component Interfaces}
