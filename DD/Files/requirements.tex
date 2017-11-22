@@ -1,0 +1,102 @@
+All the decisions in the DD have been taken following functional and nonfunctional requirements written in the RASD. In this chapter, each requirement is mapped to specific component.
+\\
+\begin{itemize}
+
+\item
+\textbf{LoginManager:}
+\begin{itemize}
+\item
+$[$R.1.1$]$ An account requires an username.
+\item
+$[$R.1.2$]$ An account requires an email address.
+\item 
+$[$R.1.3$]$ An account requires a password.
+\item
+$[$R.1.4$]$ The email address must be unique.
+\item
+$[$R.2.1$]$ The user must be logged in the application.
+\end{itemize}
+
+\item
+\textbf{EventManager:}
+\begin{itemize}
+\item
+$[$R.2.2$]$ A meeting requires a location, which is either coordinates or an address.
+\item
+$[$R.2.3$]$ A meeting requires a starting and ending hour.
+\item
+$[$R.2.4$]$ A meeting requires a name.
+\item
+$[$R.2.5$]$ A meeting requires a type.
+\item
+$[$R.2.6$]$ A meeting may have a description.
+\item
+$[$R.3.1$]$ A warning should be given at the creation of a meeting if it is unreachable or if
+it is causes conflicts.
+\item
+$[$R.3.2$]$ A warning should be given in case of exceptional events that make one or more
+meetings unreachable.
+\item
+$[$R.3.3$]$ A warning forbids the user to force the creation of a meeting.
+\item
+$[$R.6.1$]$ The minimum length of a lunch break is 30 minutes.
+\item
+$[$R.6.2$]$ The lunch break must be scheduled between 11.30 am and 2.30pm.
+\item
+$[$R.7.1$]$ The minimum length of a lunch break is 5 minutes.
+\end{itemize}
+
+\item
+\textbf{Configurator:}
+\begin{itemize}
+\item
+$[$R.4.1$]$ Different travel means should be suggested depending on the weather conditions.
+\item
+$[$R.4.2$]$ Different type of meetings should be reached with different/specific travel means.
+\item
+$[$R.4.3$]$ Different travel means should be suggested depending on the hour of the day.
+\item
+$[$R.4.4$]$ Travel means can have constraints on the length of their journey section.
+\item
+$[$R.5.1$]$ The application must support different travel means and transportation systems.
+\item
+$[$R.5.2$]$ Users can select constraints on travel means.
+\item
+$[$R.5.3$]$ The application must show results consistent with the users preferences.
+\item
+$[$R.5.4$]$ Users should be able to specify the travel passes they own.
+\item
+$[$R.5.5$]$ Users must specify their home address.
+\item
+$[$R.5.6$]$ Users can disable travel means.
+\item
+$[$R.5.7$]$ Users can enable the option to minimize air pollution.
+\item
+$[$R.7.2$]$ Users can set as many breaks as they want.
+\item
+$[$R.7.3$]$ Users can select the time slot in which they want their break to be scheduled.
+\end{itemize}
+
+\item
+\textbf{JourneyManager:}
+\begin{itemize}
+\item
+$[$R.8.1$]$ The application should notify the user when he has to get off from a transportation system.
+\item
+$[$R.8.2$]$ The applications should give directions to the users when they are driving, cycling or walking.
+\end{itemize}
+
+\item
+\textbf{PaymentHandler:}
+\begin{itemize}
+\item
+$[$R.8.3$]$ Users can buy travel passes through the application.
+\end{itemize}
+
+\item
+\textbf{SharedController:}
+\begin{itemize}
+\item
+$[$R.8.4$]$ The application must locate the nearest vehicle of the selected sharing system.
+\end{itemize}
+\end{itemize}
