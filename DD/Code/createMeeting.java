@@ -1,8 +1,8 @@
 void createMeeting(String name, String description, MeetingType type, Location location, Date start_hour, Date end_hour){
-
+    result = true;
     /*Checks if there is already an event scheduled in the given time and in case, it gives a warning*/
     if(overlaps(start_hour,end_hour)){
-        showWarning(OVERLAP);
+        result=false;
     }
     else{
         // Gets the previous scheduled meeting

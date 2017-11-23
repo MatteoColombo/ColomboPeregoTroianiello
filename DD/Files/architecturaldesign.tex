@@ -45,7 +45,7 @@ This diagram purpose is to show the hardware components of our system and where 
 \subsubsection{Login User}
 \begin{figure}[H]
 \centering
-\includegraphics[scale=0.25]{images/LoginUser}
+\includegraphics[scale=0.25]{images/UserLogin}
 \caption{Login User}
 \end{figure}In this runtime diagram you can see the login process for a user that is already registered in the application. The login informations are sent by the ApplicationInterface to the ViewController that calls the LoginManager that checks if the parameters are typed correctly. If the parameters are not valid the LoginManager generates a negative response, if it is valid you can proceed with the login process and pass the data to the DataManager that makes a request to the server. The RequestDispatcher on the server manages the requests and checks the data in the DBMS passing by the DataAccessManager. In case of the data are present in the DBMS, the DataAccessManager generates a token and put this in the DBMS and after it generates a positive response; in case of the data are not present the DataAccessManager generates a negative response. In base of positive or negative response the ApplicationInterface show respectively the home page or an error message.
 
