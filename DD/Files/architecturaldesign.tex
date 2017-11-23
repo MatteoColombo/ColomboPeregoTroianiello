@@ -75,8 +75,10 @@ This diagram purpose is to show the hardware components of our system and where 
 
 \clearpage
 \subsection{Selected Architectural styles and patterns}
-The following architectural styles have been used:
+The following architectural styles and patterns have been used:
 \begin{itemize}
+\item
+\textbf{Observer pattern:} This pattern is used between NavigationController and Controller. It allows the NavigationController to update the user’s view with new directions in a transparent way when the position changes.
 \item
 \textbf{Model-Control-View:} It is used for the main components of the system. It’s a really good choice of design that allows to keep clear the role of every component and that makes the system easier to deploy and maintain.
 \item
