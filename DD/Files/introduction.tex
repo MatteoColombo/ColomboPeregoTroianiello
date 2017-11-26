@@ -2,10 +2,32 @@
 The purpose of this document is to describe in details the concepts expressed in the RASD file, and to specify how the system will be implemented and which logical and physical components will be used.
 
 \subsection{Scope}
-The system aims at providing a calendar application that automatically computes the travel times and the journey among the meetings of the user.
-The architecture is divided in three layers so that it is extensible and easily maintainable.
-The client act as a fat client and implements most of the logic of the system, whereas the server provides support functions.
-Design patterns and architectural styles will be used to provide a reliable and maintainable system.
+Travlendar+ is a calendar-based application whose purpose is to help people to easily schedule working or personal meetings around Milan.
+Given what was written in the RASD, the main issues on which we will focus one are the following:
+\begin{itemize}
+\renewcommand\labelitemi{-}
+\item
+Provide the services,
+\item
+Allow the user to access the system and all its functions,
+\item
+Provide a reliable system that can help the users in their daily life.
+\end{itemize}
+
+To solve these issue, the development should focus on:
+\begin{itemize}
+\renewcommand\labelitemi{-}
+\item
+Extensibility
+\item
+Accessibility
+\item
+Reliability
+\end{itemize}
+
+For these reasons the system will be developed on a multi-tier architecture that will have to dialogue with almost standalone clients.
+In fact, thanks to the fact that most of the system logic is implemented on the client, the application will be more reliable and more efficient.
+
 
 \subsection{Definitions, Acronyms and Abbreviations}
 
@@ -77,17 +99,17 @@ Requirement Analysis and Specification Document: “RASD.pdf”.
 
 
 \subsection{Document Structure}
-This document is structured in three parts:
+This document is structured in four parts:
 \begin{itemize}
 \item
-Part 1: the first part focuses on the design and it is composed by four parts: Architectural, Algorithm and User Interface Design.\\
-In the first part the document focuses on the physical and logical components, on how their are aggregated and on their functions.\\
-In the algorithm part, the document analyzes two of the main algorithms of the system.\\
-In the User Interface part, the document gives a more precise descrption of the UI components and explains how they are connected together.
+Part 1: the first part focuses on the design and it is composed by three parts: Architectural, Algorithm and User Interface Design.\\
+In the first part the document focuses on the physical and logical components, on how they are aggregated and on their functions.\\
+In the algorithm part, the document analyzes four of the main algorithms of the system.\\
+In the User Interface part, the document gives a more precise description of the UI components and explains how they are connected together.
 \item
 Part 2: in the second part the document focuses on the requirements of the system and specifies how they have been implemented and how they are connected to the components of the system.
 \item
 Part 3: in the third part the document focuses on the implementation, integration and test plan, explaining how the development team should proceed to test and implement the all the components.
 \item
-Part 4: in the fourth part the document focuses on the efforts spent to the writing of this documents and explains how the work was distributed among the components of the team.
+Part 4: in the fourth part the document focuses on the efforts spent to the writing of this document.
 \end{itemize}
