@@ -1,7 +1,5 @@
-In this chapter presents two of the most important algorithms of the system.
-The first one is the one that manages the creation of a meeting, whereas the second one computes the best journey for the new appointment.
-The code is written in a pseudocode language similar to Java.
-For clearty, the code was commented and the purpose of each method is explained.
+This chapter presents some of algorithms of the application; their code is written in a Java-like pseudocode.
+
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -29,8 +27,26 @@ For clearty, the code was commented and the purpose of each method is explained.
  
 \lstset{style=mystyle}
 
+\subsection{Is Overlapped}
+This algorithm is used during the process of creation of a meeting and checks wether the new meeting that the user wants to create would be overlapped with another already scheduled.
+In case of overlaps, the method returns true.
+\lstinputlisting[language=java]{Code/isOverlapped.java}
+
 \subsection{Create Meeting}
-\lstinputlisting[language=java]{Code/createMeeting.java}
-\clearpage
-\subsection{Compute Journey}
-\lstinputlisting[language=java]{Code/journey.java}
+This algorithm is used during the process of creation of a meeting and checks if, given an already scheduled meeting and given the computed journey to reach the second one, the second meeting is reachable or not.
+In case the second meeting is unreachable, the method returns true.
+
+\lstinputlisting[language=java]{Code/nextUnreachable.java}
+
+\subsection{Create Meeting}
+This algorithm is used to check if the new setting selected by the user would create a conflict with an already planned (future) meeting.
+If any of the preferences would create a conflict, the method returns false.
+
+\lstinputlisting[language=java]{Code/checkPreferences.java}
+
+\subsection{Find best Journey}
+This algorithm is used to filter the journeys list to find the best one for the user.
+The function takes in consideration all the constraints depending on the journey length, on the weather and on the meeting.
+Then, all the journeys are ordered according to a criterion (footprint, duration), eventually the best journey that also respect the "prefered travel mean for the meeting type" preference is selected and returned.
+
+\lstinputlisting[language=java]{Code/findBestJourney.java}

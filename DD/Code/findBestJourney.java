@@ -6,7 +6,7 @@ Journey findBestJourney(List journeys, Weather weatherInfo, Preferences userPref
         Journey j = journeys.get(i);
         Segment segments = j.getSegments();
         for(h=0; h< segments.length && valid; h++){
-            valid = (segments[h].getTravelMean()).checkIfConstraintsAreRespected(segments[h],weatherInfo);
+            valid = (segments[h].getTravelMean()).checkIfConstraintsAreRespected(segments[h],weatherInfo, meeting);
         }
         if(valid){
             validJourneys.add(j);
