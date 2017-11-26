@@ -38,13 +38,13 @@ In case the second meeting is unreachable, the method returns true.
 
 \lstinputlisting[language=java]{Code/nextUnreachable.java}
 
-\subsection{Create Meeting}
+\subsection{Check User Preferences}
 This algorithm is used to check if the new setting selected by the user would create a conflict with an already planned (future) meeting.
 If any of the preferences would create a conflict, the method returns false.
 
 \lstinputlisting[language=java]{Code/checkPreferences.java}
 
-\subsection{Find best Journey}
+\subsection{Find Best Journey}
 This algorithm is used to filter the journeys list to find the best one for the user.
 The function takes in consideration all the constraints depending on the journey length, on the weather and on the meeting.
 Then, all the journeys are ordered according to a criterion (footprint, duration), eventually the best journey that also respect the "prefered travel mean for the meeting type" preference is selected and returned.
