@@ -80,6 +80,16 @@ When the navigation ended and the user arrives at the meeting location, the Jour
 
 \clearpage
 \subsection{Component Interfaces}
+The server communicates with the DBMS via the JPA over standard network protocols. Thus, the DB and the server layers can be deployed on different tiers, as well on the same one.\\
+The low-level technicalities about the specific dialect of SQL for the selected DBMS are abstracted by the JPA, which also deals with the O/R mapping.\\
+The mobile app shall communicate with the server using the back-end programmatic interface presented in the component view and implemented as a RESTful interface over the HTTPS protocol. The RESTful interface is implemented in the application server using JAX-RS and uses JSON as the data representation language.
+\\
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.4]{images/componentInterfaces}
+\caption{Component Interfaces}
+\end{figure}
+This diagram shows the most relevant parts of the interfaces that our system is going to use for communication between the various components.
 
 \clearpage
 \subsection{Selected Architectural styles and patterns}
