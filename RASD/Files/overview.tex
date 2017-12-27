@@ -40,24 +40,13 @@ The classes that implement/extend Constraint, Level, Owned Mean, Shared Mean and
 {
 \usecounter{gcount}
 }
-\item Visitors can create an account.
-\begin{list}
-	{\bfseries{}[R.\arabic{gcount}.\arabic{rcount}]~}
-	{
-	\usecounter{rcount}
-	}
-\item An account requires an username.
-\item An account requires an email address.
-\item An account requires a password.
-\item The email address must be unique.
-\end{list}
+
 \item Users can create new meetings.
 \begin{list}
 	{\bfseries{}[R.\arabic{gcount}.\arabic{rcount}]~}
 	{
 	\usecounter{rcount}
 	}
-	\item The user must be logged in the application.
 \item A meeting requires a location, which is either coordinates or an address.
 \item A meeting requires a starting and ending hour.
 \item A meeting requires a name.
@@ -129,8 +118,19 @@ The classes that implement/extend Constraint, Level, Owned Mean, Shared Mean and
 \item Users can buy travel passes through the application.
 \item The application must locate the nearest vehicle of the selected sharing system.
 \end{list}
+\end{list}
 
-
+General requirements:
+\begin{list}
+	{\bfseries{}[R.G.\arabic{rcount}]~}
+	{
+	\usecounter{rcount}
+	}
+\item The user must be logged in the application to perform all the actions.
+\item An account requires an username.
+\item An account requires an email address.
+\item An account requires a password.
+\item The email address must be unique.
 \end{list}
 
 \subsection{User Characteristics}
